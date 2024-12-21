@@ -1,0 +1,103 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Design</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #9c292a;
+        }
+
+        .card {
+            display: flex;
+            width: 1500px;
+            height: 650px;
+            border: 1px solid #8C0D1C;
+            border-radius: 10px;
+            overflow: hidden;
+            
+            box-shadow:  0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-left {
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+                .circle-image {
+            width: 400px;         /* Đặt kích thước ảnh */
+            height: 400px;        /* Đặt chiều cao ảnh */
+            border-radius: 50%;   /* Tạo góc bo tròn, biến ảnh thành hình tròn */
+            object-fit: cover;    /* Đảm bảo ảnh không bị méo khi cắt */
+        }
+
+        .card-right {
+            width: 70%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .info-table {
+            border-collapse: collapse;
+            width: 100%;
+            text-align: left="10";
+            height:300px;
+            border-radius: 5px;
+            box-shadow:  0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .info-table th, .info-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            row-gap: 10px;
+            text-align: center;
+        }
+        .info-table th {
+            background-color: #780000;
+            color:#f8ecac;
+            font-weight: bold;
+            font-size: 25px;
+            font-family: "Bahnschrift SemiBold";
+        }
+        .info-table td {
+            background-color: #fdf0d5;
+            color:#8c0d1c;}
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-left">
+            <img src="panh.png" alt="Ảnh Hình Tròn" class="circle-image">
+        </div>
+        <div class="card-right">
+          <hr>
+            <table class="info-table">
+            <tr>
+                <th style="font-size: 190%;">Họ và Tên</th>
+                <td style="font-size: 150%;">Đỗ Phương Anh</td>
+            </tr>
+            <tr>
+                <th style="font-size: 190%;">Lớp</th>
+                <td style="font-size: 150%;">12A11</td>
+            </tr>
+            <tr>
+                <th style="font-size: 190%;">Năm Sinh</th>
+                <td style="font-size: 150%;">2007</td>
+            </tr>
+        </table>
+        </div>
+    </div>
+     <script type="text/javascript" src="https://itexpress.vn/API/files/it.snow.js"></script>
+</body>
+</html>

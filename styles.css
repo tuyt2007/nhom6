@@ -1,0 +1,315 @@
+body {
+    background-color: #FEF2F4;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+header {
+    background-color: #80060c;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+footer {
+    font-family: monospace;
+    background-color: #80060c;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+h1 {
+    font-size: 75px; 
+    font-family: "WindSong", serif;
+    font-weight: 500;
+    font-style: normal;
+    margin: 0 0 10px;
+    z-index: 1;
+    color: #F8EDED;
+}
+h2 {
+    text-align: center;
+    font-size: 30px;
+    font-family: monospace;
+    margin: 0 0 10px;
+    z-index: 1;
+    color: #4F091D;
+    padding: 5px; 
+    border-radius: 5px;
+}
+h3 { color: white; }
+main {
+    padding: 20px;
+}
+section {
+    margin-bottom: 40px;
+}
+/* thanh công cụ */ 
+.sidebar {
+height: 100%;
+width: 0;
+position: fixed;
+z-index: 1;
+top: 0;
+left: 0;
+background-color: #111;
+overflow-x: hidden;
+transition: 0.5s;
+padding-top: 60px;
+}
+
+.sidebar a {
+padding: 3px 3px 3px 3px;
+text-decoration: none;
+font-size: 25px;
+color: #818181;
+display: block;
+transition: 0.3s;
+}
+
+.sidebar a:hover {
+color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+position: absolute;
+top: 0;
+right: 10px;
+font-size: 36px;
+margin-left: 40px;
+}
+
+.main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    position: absolute;
+    left: 10px;
+    top: 85px;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+@media screen and (max-height: 450px) {
+.sidebar {padding-top: 15px;}
+.sidebar a {font-size: 18px;}
+}
+
+.khoangcach {
+    display: grid; grid-template-columns: repeat(1, 1fr); 
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1.5rem; }
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+/* sự kiện */ 
+.vung-sukien {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* Set to 4 columns */
+    gap: 10px;
+}
+.sukien-card {
+    background-color: #FFB6B9;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s;
+    height: 150px;
+}
+.sukien-card:hover { transform: scale(1.05); }
+.event-chu {
+    font-family: monospace;
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #b53037;
+    padding: 4px;
+    text-align: center;
+}
+}
+.vung-sukien {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* Set to 4 columns */
+    gap: 10px;
+}
+
+.sukien-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.sukien-card:hover {
+    transform: scale(1.05);
+}
+
+.sukien-image {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 8px;
+}
+
+.sukien-title {
+    font-family: monospace;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    padding: 5px;
+    border-radius: 5px; 
+}
+/* thành tựu */ 
+.thanhtich-card {
+    position: relative;
+    overflow: hidden;
+    height: 300px; 
+    width: 100%; 
+    object-fit: cover;
+}
+
+.chuthanhtich {
+    font-family: monospace;
+    position: absolute; 
+    bottom: 10px; 
+    left: 10px; 
+    color: white; 
+    font-size: 1.5rem; 
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px; 
+    border-radius: 5px;
+}
+.thanhtich-card:hover { border-color: #7C0A02; transform: scale(1.05); }
+.p-4 { padding: 1rem; }
+.space-y-4 {
+margin-bottom: 1rem;
+}
+.chuthanhtich { font-family: monospace; font-size: 1.125rem; font-weight: bold; position: absolute;}
+/* thành viên */ 
+.thanhvien-card {
+text-decoration: none;
+font-size: 15px;
+font-family: monospace;
+display: block;
+padding: 10px;
+background-color: #b53037; 
+border-radius: 8px; 
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+transition: background-color 0.1s, transform 0.1s; 
+}
+.thanhvien-card:hover {
+background-color: #7C0A02; 
+transform: translateY(-2px); 
+}
+
+/* chữ chìm */ 
+.watermark {
+    font-family: monospace;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem; 
+    color: pink; 
+    pointer-events: none; 
+    user-select: none; 
+    z-index: -1; 
+}
+/* thư viện ảnh */
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.prev,
+.next {
+cursor: pointer;
+position: absolute;
+top: 40%;
+width: auto;
+padding: 16px;
+margin-top: -25px;
+color: #b53037;
+font-weight: bold;
+font-size: 30px;
+border-radius: 0 3px 3px 0;
+user-select: none;
+-webkit-user-select: none;
+}
+
+.prev {
+    left: 120px; 
+}
+
+.next {
+    right: 120px; 
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.9); /* Nền tối hơn khi hover */
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.9); /* Nền tối hơn khi hover */
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+.hinh {
+    object-fit: cover;
+    width: 900px;
+    height: 400px;
+}
